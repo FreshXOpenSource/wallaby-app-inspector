@@ -1,0 +1,48 @@
+{
+    "mappings": {
+        "test" :  {
+            "properties": {
+                "lastname" :  {
+                    "type": "multi_field",
+                    "fields" : {
+                        "lastname": {
+                            "type" : "string"
+                        },
+                        "untouched" : {
+                            "type": "string",
+                            "analyzer": "string_lowercase"
+                        }
+                    }
+                },
+                "firstname" :  {
+                    "type": "multi_field",
+                    "fields" : {
+                        "firstname": {
+                            "type" : "string"
+                        },
+                        "untouched" : {
+                            "type": "string",
+                            "analyzer": "string_lowercase"
+                        }
+                    }
+                },
+                "emails": {
+                    "properties": {
+                        "email" :  {
+                            "type": "multi_field",
+                            "fields" : {
+                                "email": {
+                                    "type" : "string"
+                                },
+                                "untouched" : {
+                                    "type": "string",
+                                    "analyzer": "string_lowercase"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

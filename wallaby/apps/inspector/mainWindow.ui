@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1265</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <property name="margin">
+     <number>12</number>
+    </property>
+    <item>
+     <widget class="Tabs" name="tabs_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>66</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::South</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="documentMode">
+       <bool>true</bool>
+      </property>
+      <property name="template" stdset="0">
+       <string>inspector-main-tabs</string>
+      </property>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Widgets</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
+        <property name="spacing">
+         <number>-1</number>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="widget_2" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>33</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>-1</number>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="widget_3" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <property name="spacing">
+               <number>-1</number>
+              </property>
+              <property name="margin">
+               <number>6</number>
+              </property>
+              <item>
+               <widget class="ActionButton" name="actionButton_2">
+                <property name="text">
+                 <string>save</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-save</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="ActionButton" name="actionButton_3">
+                <property name="text">
+                 <string>edit</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-edit</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="ActionButton" name="actionButton">
+                <property name="text">
+                 <string>load</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-load</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="ActionButton" name="actionButton_4">
+                <property name="text">
+                 <string>cancel</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-rollback</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="EmbeddedViewTable" name="widgetList">
+             <property name="template" stdset="0">
+              <string>inspector-widgets</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="ActionButton" name="actionButton_5">
+             <property name="text">
+              <string>remove</string>
+             </property>
+             <property name="template" stdset="0">
+              <string>inspector-widgets-remove</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="Tabs" name="tabs">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>66</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <property name="template" stdset="0">
+           <string>inspector-widget-tabs</string>
+          </property>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>Widget configuration</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QWidget" name="widget" native="true">
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <item>
+                <widget class="QScrollArea" name="scrollArea">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="scrollAreaWidgetContents">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>789</width>
+                    <height>618</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_4">
+                   <item>
+                    <widget class="Stacked" name="stacked">
+                     <property name="template" stdset="0">
+                      <string>inspector-widgets-configstack</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_3">
+           <attribute name="title">
+            <string>Generic configurator</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="EmbeddedViewTable" name="embeddedViewTable">
+              <property name="template" stdset="0">
+               <string>inspector-dict</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_5">
+           <attribute name="title">
+            <string>Widget Test</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="7" column="0">
+             <widget class="TextPopupButton" name="textPopupButton">
+              <property name="text">
+               <string>Text - Popup</string>
+              </property>
+              <property name="template" stdset="0">
+               <string>itest-textpopup</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="0">
+             <widget class="DateEdit" name="dateEdit">
+              <property name="template" stdset="0">
+               <string>itest-datedit</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="MultiViewTable" name="multiViewTable">
+              <property name="template" stdset="0">
+               <string>itest-multiview</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="ValueButton" name="valueButton">
+              <property name="text">
+               <string>Value Button</string>
+              </property>
+              <property name="template" stdset="0">
+               <string>itest-valuebutton</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="Label" name="labelTest">
+              <property name="text">
+               <string>Label</string>
+              </property>
+              <property name="template" stdset="0">
+               <string>itest-label</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="1">
+             <widget class="Slider" name="Slider">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="template" stdset="0">
+               <string>itest-slider</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="ToggleButton" name="toggleButton">
+              <property name="text">
+               <string>Toggle - Button</string>
+              </property>
+              <property name="template" stdset="0">
+               <string>itest-togglebutton</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="PushButton" name="pushButton">
+              <property name="text">
+               <string>Push - Button</string>
+              </property>
+              <property name="template" stdset="0">
+               <string>itest-pushbutton</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="PayloadLabel" name="payloadLabel">
+              <property name="text">
+               <string>Payload - Label</string>
+              </property>
+              <property name="template" stdset="0">
+               <string>itest-payload-table</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="ImageLabel" name="imageLabel">
+              <property name="text">
+               <string>Image</string>
+              </property>
+              <property name="template" stdset="0">
+               <string>itest-image</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0" colspan="2">
+             <widget class="Progress" name="progress">
+              <property name="template" stdset="0">
+               <string>itest-progress</string>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="0">
+             <widget class="RadioButton" name="radioButton">
+              <property name="text">
+               <string>Radio tet</string>
+              </property>
+              <property name="template" stdset="0">
+               <string>itest-radio</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Peers</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <property name="spacing">
+         <number>-1</number>
+        </property>
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="widget_8" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>33</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <property name="spacing">
+            <number>-1</number>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="widget_9" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <property name="spacing">
+               <number>-1</number>
+              </property>
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="ActionButton" name="actionButton_10">
+                <property name="text">
+                 <string>save</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-save</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="ActionButton" name="actionButton_11">
+                <property name="text">
+                 <string>edit</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-edit</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="ActionButton" name="actionButton_12">
+                <property name="text">
+                 <string>load</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-load</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="ActionButton" name="actionButton_13">
+                <property name="text">
+                 <string>cancel</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-rollback</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="EmbeddedViewTable" name="embeddedViewTable_3">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>33</horstretch>
+               <verstretch>70</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="template" stdset="0">
+              <string>inspector-rooms</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_4" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <widget class="ActionButton" name="actionButton_16">
+                <property name="text">
+                 <string>initialize</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-rooms-initialize</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="ActionButton" name="actionButton_15">
+                <property name="text">
+                 <string>Suggest !</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-button-suggest</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="ActionButton" name="actionButton_14">
+                <property name="text">
+                 <string>remove</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-rooms-remove</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="EmbeddedViewTable" name="embeddedViewTable_4">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>30</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="template" stdset="0">
+              <string>inspector-suggests</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_5" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>66</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="spacing">
+            <number>-1</number>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="widget_6" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="ActionButton" name="actionButton_6">
+                <property name="text">
+                 <string>add peer</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-peers-add</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="ActionButton" name="actionButton_7">
+                <property name="text">
+                 <string>remove peer</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-peers-remove</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="EmbeddedViewTable" name="widgetList_2">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="template" stdset="0">
+              <string>inspector-peers</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="EmbeddedViewTable" name="embeddedViewTable_2">
+             <property name="template" stdset="0">
+              <string>inspector-peers-config</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_7" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="ActionButton" name="actionButton_9">
+                <property name="text">
+                 <string>Add peer config</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-peer-config-add</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="ActionButton" name="actionButton_8">
+                <property name="text">
+                 <string>Remove peer config</string>
+                </property>
+                <property name="template" stdset="0">
+                 <string>inspector-peer-config-remove</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Documents</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <widget class="EmbeddedViewTable" name="embeddedViewTable_5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>33</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="template" stdset="0">
+           <string>inspector-doc-rooms</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="PlainTextEdit" name="plainTextEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>66</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="template" stdset="0">
+           <string>inspector-doc-json</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ActionButton</class>
+   <extends>QPushButton</extends>
+   <header>wallaby.frontends.qt.widgets.buttons.actionButton</header>
+  </customwidget>
+  <customwidget>
+   <class>DateEdit</class>
+   <extends>QDateEdit</extends>
+   <header>wallaby.frontends.qt.widgets.edits.dateEdit</header>
+  </customwidget>
+  <customwidget>
+   <class>EmbeddedViewTable</class>
+   <extends>QTableView</extends>
+   <header>wallaby.frontends.qt.widgets.multi.embeddedViewTable</header>
+  </customwidget>
+  <customwidget>
+   <class>ImageLabel</class>
+   <extends>QLabel</extends>
+   <header>wallaby.frontends.qt.widgets.labels.imageLabel</header>
+  </customwidget>
+  <customwidget>
+   <class>Label</class>
+   <extends>QLabel</extends>
+   <header>wallaby.frontends.qt.widgets.labels.label</header>
+  </customwidget>
+  <customwidget>
+   <class>MultiViewTable</class>
+   <extends>QTableView</extends>
+   <header>wallaby.frontends.qt.widgets.multi.multiViewTable</header>
+  </customwidget>
+  <customwidget>
+   <class>PayloadLabel</class>
+   <extends>QLabel</extends>
+   <header>wallaby.frontends.qt.widgets.labels.payloadLabel</header>
+  </customwidget>
+  <customwidget>
+   <class>PlainTextEdit</class>
+   <extends>QPlainTextEdit</extends>
+   <header>wallaby.frontends.qt.widgets.edits.plainTextEdit</header>
+  </customwidget>
+  <customwidget>
+   <class>Progress</class>
+   <extends>QProgressBar</extends>
+   <header>wallaby.frontends.qt.widgets.labels.progress</header>
+  </customwidget>
+  <customwidget>
+   <class>PushButton</class>
+   <extends>QPushButton</extends>
+   <header>wallaby.frontends.qt.widgets.buttons.pushButton</header>
+  </customwidget>
+  <customwidget>
+   <class>RadioButton</class>
+   <extends>QRadioButton</extends>
+   <header>wallaby.frontends.qt.widgets.buttons.radioButton</header>
+  </customwidget>
+  <customwidget>
+   <class>Slider</class>
+   <extends>QSlider</extends>
+   <header>wallaby.frontends.qt.widgets.slider.slider</header>
+  </customwidget>
+  <customwidget>
+   <class>Stacked</class>
+   <extends>QStackedWidget</extends>
+   <header>wallaby.frontends.qt.widgets.containers.stacked</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Tabs</class>
+   <extends>QTabWidget</extends>
+   <header>wallaby.frontends.qt.widgets.containers.tabs</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TextPopupButton</class>
+   <extends>QPushButton</extends>
+   <header>wallaby.frontends.qt.widgets.buttons.textPopupButton</header>
+  </customwidget>
+  <customwidget>
+   <class>ToggleButton</class>
+   <extends>PushButton</extends>
+   <header>wallaby.frontends.qt.widgets.buttons.toggleButton</header>
+  </customwidget>
+  <customwidget>
+   <class>ValueButton</class>
+   <extends>QPushButton</extends>
+   <header>wallaby.frontends.qt.widgets.buttons.valueButton</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="app.qrc"/>
+ </resources>
+ <connections/>
+</ui>
