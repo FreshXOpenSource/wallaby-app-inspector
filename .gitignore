@@ -9,6 +9,7 @@ dev
 *.dmg
 *.pid
 *.pyc
+*.pyo
 *.dylib
 *.os
 *_UI.py

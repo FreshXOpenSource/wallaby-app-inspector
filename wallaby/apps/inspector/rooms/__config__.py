@@ -14,6 +14,7 @@ class __config__(Room):
         self._roomViewer = None
 
         self._initialized = False
+        self._state = None
 
     def customPeers(self):
         if self._widgetViewer is not None: self._widgetViewer.destroy()
@@ -28,6 +29,9 @@ class __config__(Room):
             self.catch("Inspector.In.Suggest", self._doSuggest)
             self.catch("Inspector.In.InitializeRoom", self._initRoom)
 
+            from wallaby.pf.peer.editDocument import EditDocument
+            self.catch(EditDocument.Out.State, self._newState)
+
             from wallaby.common.document import Document
             from wallaby.pf.peer.credentials import Credentials
             House.get("__DOC__").throw(Credentials.Out.Credential, Document())
@@ -36,6 +40,9 @@ class __config__(Room):
         self._lastSelection = None
         self._lastRoom = None
         self._suggests = None
+
+    def _newState(self, pillow, state):
+        self._state = state
 
     def _doSuggest(self, *args):
         room = self._roomViewer.selection()
@@ -97,6 +104,18 @@ class __config__(Room):
                 self.__addPeer(room, suggest["peer"], config)
 
     def __addPeer(self, room, name, config):
+        if self._state not in ("Edit", "New", "Dirty"):
+            from wallaby.qt_combat import QtGui
+            import wallaby.FX as FX
+            reply = QtGui.QMessageBox.question(FX.mainWindow, 'Edit configuration',
+                "You must edit the configuration to add peers. Do you want to edit?", QtGui.QMessageBox.Yes, QtGui.QMessageBox.No)
+
+            if reply == QtGui.QMessageBox.Yes:
+                from wallaby.pf.peer.editDocument import EditDocument
+                self.throw(EditDocument.In.Edit, None)
+            else:
+                return
+
         from wallaby.pf.peer.documentChanger import DocumentChanger
         self.throw(DocumentChanger.In.InsertRow, ("rooms.*.Peers", {"name": name, "config": config}))
 
