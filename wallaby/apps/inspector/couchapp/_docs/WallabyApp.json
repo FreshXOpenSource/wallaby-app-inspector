@@ -1,5 +1,6 @@
 {
    "_id": "WallabyApp2",
+   "wallabyUser": "admin",
    "rooms": {
        "__CONFIG__": {
            "Peers": [
@@ -10,15 +11,15 @@
                }
            ]
        },
+       "__DOC__": {
+           "Peers": [
+           ]
+       },
        "__CREDENTIALS__": {
            "Peers": [
            ]
        },
        "__SUGGEST__": {
-           "Peers": [
-           ]
-       },
-       "__DOC__": {
            "Peers": [
            ]
        }
@@ -154,24 +155,27 @@
            ],
            "enablePathValue": null
        },
-       "inspector-showid": {
-           "selectOnEdit": false,
+       "inspector-peer-config-add": {
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
            "triggers": [
                "",
-               "checked",
-               "unchecked"
+               "clicked",
+               "pressed",
+               "released"
            ],
            "triggeredPillows": {
            },
-           "value": "True",
-           "wallabyType": "CheckBox",
-           "path": "widgets.*.idVisible",
+           "feathers": "rooms.*.Peers.*.config",
+           "wallabyType": "ActionButton",
+           "tab": null,
            "enableFeathers": [
+               "Edit",
+               "Dirty"
            ],
-           "enablePathValue": null
+           "enablePathValue": null,
+           "pillow": "DocumentChanger.In.InsertKey"
        },
        "inspector-groupbox-multipage": {
            "enablePath": null,
@@ -367,11 +371,14 @@
            "path": "rooms",
            "minColumnWidth": 0,
            "enablePath": null,
+           "editOnInsert": false,
            "minRowHeight": 0,
            "doubleClickPillow": "Inspector.In.RemovePeer",
            "reverseOrder": false,
            "selectOnEdit": false,
            "enablePathValue": null,
+           "sizeHints": {
+           },
            "autoResizeCells": false,
            "wrapInList": false,
            "dbColumns": [
@@ -464,11 +471,14 @@
            "path": "widgets.*.sortable",
            "minColumnWidth": 0,
            "enablePath": null,
+           "editOnInsert": false,
            "minRowHeight": 0,
            "doubleClickPillow": null,
            "reverseOrder": false,
            "selectOnEdit": false,
            "enablePathValue": null,
+           "sizeHints": {
+           },
            "autoResizeCells": false,
            "wrapInList": false,
            "dbColumns": [
@@ -694,6 +704,31 @@
            "enablePathValue": null,
            "pillow": "DocumentChanger.In.RemoveRow"
        },
+       "inspector-rooms-initialize": {
+           "enablePath": null,
+           "hideIfDisabled": false,
+           "room": "__CONFIG__",
+           "triggers": [
+               "",
+               "clicked",
+               "pressed",
+               "released"
+           ],
+           "triggeredPillows": [
+               {
+                   "trigger": "clicked",
+                   "feathers": "",
+                   "pillow": "Inspector.In.InitializeRoom"
+               }
+           ],
+           "feathers": null,
+           "wallabyType": "ActionButton",
+           "tab": null,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
+           "pillow": ""
+       },
        "inspector-peer-config-remove": {
            "enablePath": null,
            "hideIfDisabled": false,
@@ -715,6 +750,34 @@
            ],
            "enablePathValue": null,
            "pillow": "DocumentChanger.In.RemoveKey"
+       },
+       "inspector-sizehints-add": {
+           "enablePath": null,
+           "hideIfDisabled": false,
+           "room": "__CONFIG__",
+           "triggers": [
+               "",
+               "clicked",
+               "pressed",
+               "released"
+           ],
+           "triggeredPillows": [
+               {
+                   "isJson": true,
+                   "trigger": "clicked",
+                   "feathers": "[\"widgets.*.sizeHints\", {}]",
+                   "pillow": "DocumentChanger.In.InsertKey"
+               }
+           ],
+           "feathers": null,
+           "wallabyType": "ActionButton",
+           "tab": null,
+           "enableFeathers": [
+               "Edit",
+               "Dirty"
+           ],
+           "enablePathValue": null,
+           "pillow": null
        },
        "inspector-save": {
            "enablePath": null,
@@ -774,11 +837,14 @@
            "path": "rooms.*.Peers",
            "minColumnWidth": 0,
            "enablePath": null,
+           "editOnInsert": false,
            "minRowHeight": 0,
            "doubleClickPillow": null,
            "reverseOrder": false,
            "selectOnEdit": false,
            "enablePathValue": null,
+           "sizeHints": {
+           },
            "autoResizeCells": false,
            "wrapInList": false,
            "dbColumns": [
@@ -842,11 +908,14 @@
            "path": "widgets.*.dbColumns",
            "minColumnWidth": 0,
            "enablePath": null,
+           "editOnInsert": false,
            "minRowHeight": 0,
            "doubleClickPillow": null,
            "reverseOrder": false,
            "selectOnEdit": false,
            "enablePathValue": null,
+           "sizeHints": {
+           },
            "autoResizeCells": false,
            "wrapInList": false,
            "dbColumns": [
@@ -856,7 +925,7 @@
                    "label": "Type"
                },
                {
-                   "path": "args",
+                   "path": "type-args",
                    "type": "stringedit",
                    "label": "Arguments"
                },
@@ -894,11 +963,14 @@
            "path": "widgets.*.viewArguments",
            "minColumnWidth": 0,
            "enablePath": null,
+           "editOnInsert": false,
            "minRowHeight": 0,
            "doubleClickPillow": null,
            "reverseOrder": false,
            "selectOnEdit": false,
            "enablePathValue": null,
+           "sizeHints": {
+           },
            "autoResizeCells": false,
            "wrapInList": false,
            "dbColumns": [
@@ -1023,11 +1095,14 @@
            "path": "rooms.*.Peers.*.config",
            "minColumnWidth": 0,
            "enablePath": null,
+           "editOnInsert": false,
            "minRowHeight": 0,
            "doubleClickPillow": null,
            "reverseOrder": false,
            "selectOnEdit": false,
            "enablePathValue": null,
+           "sizeHints": {
+           },
            "autoResizeCells": false,
            "wrapInList": false,
            "dbColumns": [
@@ -1146,9 +1221,9 @@
            "wallabyType": "ComboBox"
        },
        "itest-payload-table": {
+           "pillow": null,
            "room": null,
-           "wallabyType": "PayloadLabel",
-           "pillow": null
+           "wallabyType": "PayloadLabel"
        },
        "inspector-autoresize": {
            "selectOnEdit": false,
@@ -1258,7 +1333,7 @@
            ],
            "triggeredPillows": {
            },
-           "value": null,
+           "value": "True",
            "wallabyType": "CheckBox",
            "path": "multiSelect",
            "enableFeathers": [
@@ -1308,11 +1383,14 @@
            "path": "rooms",
            "minColumnWidth": 0,
            "enablePath": null,
+           "editOnInsert": false,
            "minRowHeight": 0,
            "doubleClickPillow": "Inspector.In.ShowDoc",
            "reverseOrder": false,
            "selectOnEdit": false,
            "enablePathValue": null,
+           "sizeHints": {
+           },
            "autoResizeCells": false,
            "wrapInList": false,
            "dbColumns": [
@@ -1345,11 +1423,14 @@
            "path": "peers",
            "minColumnWidth": 0,
            "enablePath": "",
+           "editOnInsert": false,
            "minRowHeight": 0,
            "doubleClickPillow": "__CONFIG__:Inspector.In.AddPeer",
            "reverseOrder": false,
            "selectOnEdit": false,
            "enablePathValue": null,
+           "sizeHints": {
+           },
            "autoResizeCells": false,
            "wrapInList": false,
            "dbColumns": [
@@ -1424,27 +1505,56 @@
            "enablePathValue": null,
            "enterTab": null
        },
-       "inspector-peer-config-add": {
+       "inspector-table-sizehints": {
+           "triggeredPillows": {
+           },
+           "doubleClickFeathers": null,
+           "wallabyType": "EmbeddedViewTable",
+           "path": "widgets.*.sizeHints",
+           "minColumnWidth": 0,
            "enablePath": null,
+           "editOnInsert": false,
+           "minRowHeight": 0,
+           "doubleClickPillow": null,
+           "reverseOrder": false,
+           "selectOnEdit": false,
+           "enablePathValue": null,
+           "sizeHints": {
+           },
+           "autoResizeCells": false,
+           "wrapInList": false,
+           "dbColumns": [
+               {
+                   "path": "__key__",
+                   "type-args": "",
+                   "type": "stringedit",
+                   "label": "Column path"
+               },
+               {
+                   "path": "width",
+                   "type": "numberedit",
+                   "label": "Width"
+               },
+               {
+                   "path": "height",
+                   "type": "numberedit",
+                   "label": "Height"
+               }
+           ],
+           "doubleClickTab": null,
+           "isList": false,
+           "notSelectableIfDisabled": false,
+           "enableFeathers": [
+           ],
            "hideIfDisabled": false,
            "room": "__CONFIG__",
            "triggers": [
                "",
                "clicked",
-               "pressed",
-               "released"
+               "double-clicked",
+               "key"
            ],
-           "triggeredPillows": {
-           },
-           "feathers": "rooms.*.Peers.*.config",
-           "wallabyType": "ActionButton",
-           "tab": null,
-           "enableFeathers": [
-               "Edit",
-               "Dirty"
-           ],
-           "enablePathValue": null,
-           "pillow": "DocumentChanger.In.InsertKey"
+           "identifier": null
        },
        "inspector-container-path": {
            "enablePath": null,
@@ -1539,7 +1649,7 @@
            "wallabyType": "LineEdit",
            "contextMenuEntries": {
            },
-           "path": "widgets.*.identifier",
+           "path": "widgets.*.viewIdentifier",
            "selectOnEdit": false,
            "throwWhileEditing": false,
            "enterTab": null
@@ -1601,18 +1711,20 @@
        },
        "inspector-table-triggeredpillows": {
            "triggeredPillows": [
-               null
            ],
            "doubleClickFeathers": null,
            "wallabyType": "EmbeddedViewTable",
            "path": "widgets.*.triggeredPillows",
            "minColumnWidth": 0,
            "enablePath": null,
+           "editOnInsert": false,
            "minRowHeight": 0,
            "doubleClickPillow": null,
            "reverseOrder": false,
            "selectOnEdit": false,
            "enablePathValue": null,
+           "sizeHints": {
+           },
            "autoResizeCells": false,
            "wrapInList": false,
            "dbColumns": [
@@ -1831,8 +1943,9 @@
        },
        "itest-label": {
            "enablePath": null,
-           "hideIfDisabled": false,
+           "markdown": false,
            "room": null,
+           "hideIfDisabled": false,
            "wallabyType": "Label",
            "path": null,
            "enableFeathers": [
@@ -1848,11 +1961,14 @@
            "path": "widgets",
            "minColumnWidth": "100.0",
            "enablePath": null,
+           "editOnInsert": false,
            "minRowHeight": "50.0",
            "doubleClickPillow": null,
            "reverseOrder": false,
            "selectOnEdit": false,
            "enablePathValue": null,
+           "sizeHints": {
+           },
            "autoResizeCells": false,
            "wrapInList": false,
            "dbColumns": [
@@ -2105,6 +2221,8 @@
            "doubleClickPillow": null,
            "viewIdentifier": null,
            "enablePathValue": null,
+           "sizeHints": {
+           },
            "autoResizeCells": false,
            "triggeredPillows": {
            },
@@ -2224,11 +2342,14 @@
            "path": "widgets.*",
            "minColumnWidth": 0,
            "enablePath": null,
+           "editOnInsert": false,
            "minRowHeight": 100,
            "doubleClickPillow": null,
            "reverseOrder": false,
            "selectOnEdit": false,
            "enablePathValue": null,
+           "sizeHints": {
+           },
            "autoResizeCells": false,
            "wrapInList": false,
            "dbColumns": [
@@ -2277,11 +2398,14 @@
            "path": "widgets.*.enableFeathers",
            "minColumnWidth": 0,
            "enablePath": null,
+           "editOnInsert": true,
            "minRowHeight": 0,
            "doubleClickPillow": null,
            "reverseOrder": false,
            "selectOnEdit": false,
            "enablePathValue": null,
+           "sizeHints": {
+           },
            "autoResizeCells": false,
            "wrapInList": false,
            "dbColumns": [
@@ -2345,6 +2469,25 @@
            ],
            "enablePathValue": null,
            "pillow": "DocumentChanger.In.RemoveKey"
+       },
+       "inspector-showid": {
+           "selectOnEdit": false,
+           "enablePath": null,
+           "hideIfDisabled": false,
+           "room": "__CONFIG__",
+           "triggers": [
+               "",
+               "checked",
+               "unchecked"
+           ],
+           "triggeredPillows": {
+           },
+           "value": "True",
+           "wallabyType": "CheckBox",
+           "path": "widgets.*.idVisible",
+           "enableFeathers": [
+           ],
+           "enablePathValue": null
        },
        "inspector-widget-tabs": {
            "enablePath": null,
@@ -2434,6 +2577,33 @@
            "enableFeathers": [
                "Dirty",
                "Edit"
+           ],
+           "enablePathValue": null,
+           "pillow": null
+       },
+       "inspector-sizehints-remove": {
+           "enablePath": null,
+           "hideIfDisabled": false,
+           "room": "__CONFIG__",
+           "triggers": [
+               "",
+               "clicked",
+               "pressed",
+               "released"
+           ],
+           "triggeredPillows": [
+               {
+                   "trigger": "clicked",
+                   "feathers": "widgets.*.sizeHints",
+                   "pillow": "DocumentChanger.In.RemoveKey"
+               }
+           ],
+           "feathers": null,
+           "wallabyType": "ActionButton",
+           "tab": null,
+           "enableFeathers": [
+               "Edit",
+               "Dirty"
            ],
            "enablePathValue": null,
            "pillow": null
