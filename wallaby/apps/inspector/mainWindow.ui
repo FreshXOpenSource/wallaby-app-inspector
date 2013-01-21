@@ -235,6 +235,16 @@
             <string>Widget Test</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout">
+            <item row="10" column="1">
+             <widget class="Slider" name="Slider">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="template" stdset="0">
+               <string>itest-slider</string>
+              </property>
+             </widget>
+            </item>
             <item row="7" column="0">
              <widget class="TextPopupButton" name="textPopupButton">
               <property name="text">
@@ -276,16 +286,6 @@
               </property>
               <property name="template" stdset="0">
                <string>itest-label</string>
-              </property>
-             </widget>
-            </item>
-            <item row="10" column="1">
-             <widget class="Slider" name="Slider">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="template" stdset="0">
-               <string>itest-slider</string>
               </property>
              </widget>
             </item>
@@ -336,13 +336,20 @@
               </property>
              </widget>
             </item>
-            <item row="11" column="0">
+            <item row="12" column="0">
              <widget class="RadioButton" name="radioButton">
               <property name="text">
                <string>Radio tet</string>
               </property>
               <property name="template" stdset="0">
                <string>itest-radio</string>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="0">
+             <widget class="DateTimeEdit" name="dateTimeEdit">
+              <property name="template" stdset="0">
+               <string>itest-datetimedit</string>
               </property>
              </widget>
             </item>
@@ -641,6 +648,11 @@
    <class>DateEdit</class>
    <extends>QDateEdit</extends>
    <header>wallaby.frontends.qt.widgets.edits.dateEdit</header>
+  </customwidget>
+  <customwidget>
+   <class>DateTimeEdit</class>
+   <extends>QDateTimeEdit</extends>
+   <header>wallaby.frontends.qt.widgets.edits.dateTimeEdit</header>
   </customwidget>
   <customwidget>
    <class>EmbeddedViewTable</class>
