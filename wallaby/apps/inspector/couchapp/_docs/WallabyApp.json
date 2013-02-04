@@ -11,15 +11,15 @@
                }
            ]
        },
-       "__DOC__": {
-           "Peers": [
-           ]
-       },
        "__CREDENTIALS__": {
            "Peers": [
            ]
        },
        "__SUGGEST__": {
+           "Peers": [
+           ]
+       },
+       "__DOC__": {
            "Peers": [
            ]
        }
@@ -142,6 +142,28 @@
            ],
            "enablePathValue": null,
            "pillow": "DocumentChanger.In.InsertRow"
+       },
+       "checkBox_2": {
+           "selectOnEdit": false,
+           "enablePath": null,
+           "hideIfDisabled": false,
+           "room": "__CONFIG__",
+           "triggers": [
+               "",
+               "clicked",
+               "pressed",
+               "released",
+               "checked",
+               "unchecked"
+           ],
+           "triggeredPillows": {
+           },
+           "value": "true",
+           "wallabyType": "CheckBox",
+           "path": "widgets.*.includeSeconds",
+           "enableFeathers": [
+           ],
+           "enablePathValue": null
        },
        "itest-progress": {
            "enablePath": null,
@@ -1208,7 +1230,7 @@
            "viewIdentifier": null,
            "source": "__DOC__",
            "isEditor": false,
-           "insertPillow": null,
+           "wallabyType": "ComboBox",
            "viewPath": null,
            "view": null,
            "path": "widgets.*.triggeredPillows.*.trigger",
@@ -1218,12 +1240,12 @@
            "enablePathValue": null,
            "viewArguments": {
            },
-           "wallabyType": "ComboBox"
+           "insertPillow": null
        },
        "itest-payload-table": {
-           "pillow": null,
            "room": null,
-           "wallabyType": "PayloadLabel"
+           "wallabyType": "PayloadLabel",
+           "pillow": null
        },
        "inspector-autoresize": {
            "selectOnEdit": false,
@@ -1281,6 +1303,19 @@
            "path": null,
            "selectOnEdit": false,
            "enablePathValue": null
+       },
+       "itest-datetimedit": {
+           "defaultToNow": false,
+           "selectOnEdit": false,
+           "enablePath": null,
+           "hideIfDisabled": false,
+           "room": null,
+           "wallabyType": "DateTimeEdit",
+           "path": null,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
+           "includeSeconds": false
        },
        "itest-slider": {
            "enablePath": null,
@@ -1467,7 +1502,7 @@
            "viewIdentifier": null,
            "source": "__SUGGEST__:__DOC__",
            "isEditor": true,
-           "wallabyType": "ComboBox",
+           "insertPillow": null,
            "viewPath": null,
            "view": null,
            "path": "widgets.*.triggeredPillows.*.pillow",
@@ -1477,7 +1512,7 @@
            "enablePathValue": null,
            "viewArguments": {
            },
-           "insertPillow": null
+           "wallabyType": "ComboBox"
        },
        "inspector-querydocid": {
            "selectOnEdit": false,
@@ -2300,7 +2335,7 @@
        "inspector-defaulttonow": {
            "enablePath": null,
            "hideIfDisabled": false,
-           "room": null,
+           "room": "__CONFIG__",
            "triggers": [
                "",
                "checked",
@@ -2310,9 +2345,9 @@
            ],
            "triggeredPillows": {
            },
-           "value": null,
+           "value": "true",
            "wallabyType": "CheckBox",
-           "path": null,
+           "path": "widgets.*.defaultToNow",
            "selectOnEdit": false,
            "enablePathValue": null
        },
