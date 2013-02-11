@@ -132,9 +132,16 @@
             </widget>
            </item>
            <item>
-            <widget class="EmbeddedViewTable" name="widgetList">
+            <widget class="ComboBox" name="ComboBox">
              <property name="template" stdset="0">
-              <string>inspector-widgets</string>
+              <string>inspector-filter-widgets</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="MultiViewTable" name="multiViewTable_2">
+             <property name="template" stdset="0">
+              <string>inspector-query-widgets</string>
              </property>
             </widget>
            </item>
@@ -643,6 +650,11 @@
    <class>ActionButton</class>
    <extends>QPushButton</extends>
    <header>wallaby.frontends.qt.widgets.buttons.actionButton</header>
+  </customwidget>
+  <customwidget>
+   <class>ComboBox</class>
+   <extends>QComboBox</extends>
+   <header>wallaby.frontends.qt.widgets.combo.comboBox</header>
   </customwidget>
   <customwidget>
    <class>DateEdit</class>

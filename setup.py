@@ -4,7 +4,7 @@
 from setuptools import setup, find_packages
 
 setup(name='wallaby-app-inspector',
-      version='0.1.23',
+      version='0.1.24',
       url='https://github.com/FreshXOpenSource/wallaby-app-inspector',
       author='FreshX GbR',
       author_email='wallaby@freshx.de',
