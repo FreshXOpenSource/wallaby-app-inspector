@@ -11,12 +11,37 @@
                }
            ]
        },
-       "__CREDENTIALS__": {
+       "__WIDGETQUERY__": {
            "Peers": [
+               {
+                   "config": {
+                   },
+                   "name": "Debugger"
+               },
+               {
+                   "config": {
+                       "dstRoom": "__CONFIG__",
+                       "pillow": "MultiViewer.In.Refresh"
+                   },
+                   "name": "MultiViewEditor"
+               }
            ]
        },
        "__SUGGEST__": {
            "Peers": [
+           ]
+       },
+       "__CREDENTIALS__": {
+           "Peers": [
+           ]
+       },
+       "__FILTERS__": {
+           "Peers": [
+               {
+                   "config": {
+                   },
+                   "name": "Debugger"
+               }
            ]
        },
        "__DOC__": {
@@ -142,28 +167,6 @@
            ],
            "enablePathValue": null,
            "pillow": "DocumentChanger.In.InsertRow"
-       },
-       "checkBox_2": {
-           "selectOnEdit": false,
-           "enablePath": null,
-           "hideIfDisabled": false,
-           "room": "__CONFIG__",
-           "triggers": [
-               "",
-               "clicked",
-               "pressed",
-               "released",
-               "checked",
-               "unchecked"
-           ],
-           "triggeredPillows": {
-           },
-           "value": "true",
-           "wallabyType": "CheckBox",
-           "path": "widgets.*.includeSeconds",
-           "enableFeathers": [
-           ],
-           "enablePathValue": null
        },
        "itest-progress": {
            "enablePath": null,
@@ -465,6 +468,38 @@
            "enableFeathers": [
            ],
            "enablePathValue": null
+       },
+       "inspector-filter-widgets": {
+           "sourcePath": "filters",
+           "viewDisplayPath": null,
+           "triggeredPillows": {
+           },
+           "wallabyType": "ComboBox",
+           "enablePath": null,
+           "viewIdentifier": null,
+           "source": "__FILTERS__:__DOC__",
+           "viewPath": null,
+           "selectOnEdit": false,
+           "enablePathValue": null,
+           "selectPillow": null,
+           "dataView": false,
+           "path": "args.filter",
+           "enableFeathers": [
+           ],
+           "throwWhileEditing": false,
+           "hideIfDisabled": false,
+           "room": "__WIDGETQUERY__",
+           "triggers": [
+               "",
+               "enter",
+               "key"
+           ],
+           "viewArguments": {
+           },
+           "isEditor": false,
+           "isView": false,
+           "insertPillow": null,
+           "view": null
        },
        "inspector-cb-isjson": {
            "enablePath": null,
@@ -1218,34 +1253,97 @@
            "pillow": "EditDocument.In.Load"
        },
        "inspector-triggers": {
-           "selectOnEdit": false,
-           "enablePath": null,
-           "hideIfDisabled": false,
-           "room": "__CONFIG__",
            "sourcePath": "widgets.*.triggers",
            "viewDisplayPath": null,
-           "dataView": false,
-           "throwWhileEditing": false,
-           "selectPillow": null,
+           "triggeredPillows": {
+           },
+           "wallabyType": "ComboBox",
+           "enablePath": null,
            "viewIdentifier": null,
            "source": "__DOC__",
-           "isEditor": false,
-           "wallabyType": "ComboBox",
            "viewPath": null,
-           "view": null,
+           "selectOnEdit": false,
+           "enablePathValue": null,
+           "selectPillow": null,
+           "dataView": false,
            "path": "widgets.*.triggeredPillows.*.trigger",
-           "isView": false,
            "enableFeathers": [
            ],
-           "enablePathValue": null,
+           "throwWhileEditing": false,
+           "hideIfDisabled": false,
+           "room": "__CONFIG__",
+           "triggers": [
+               "",
+               "enter",
+               "key"
+           ],
            "viewArguments": {
            },
-           "insertPillow": null
+           "isEditor": false,
+           "isView": false,
+           "insertPillow": null,
+           "view": null
+       },
+       "inspector-query-widgets": {
+           "contextMenuEntries": {
+           },
+           "idVisible": false,
+           "dataView": true,
+           "doubleClickFeathers": null,
+           "multiSelect": false,
+           "wallabyType": "MultiViewTable",
+           "tab": null,
+           "minColumnWidth": 0,
+           "enablePath": null,
+           "minRowHeight": 0,
+           "doubleClickPillow": null,
+           "viewIdentifier": "__WIDGETQUERY__",
+           "enablePathValue": null,
+           "sizeHints": {
+           },
+           "autoResizeCells": false,
+           "triggeredPillows": {
+           },
+           "dbColumns": [
+               {
+                   "path": "__key__",
+                   "type": "string",
+                   "label": "Name"
+               },
+               {
+                   "path": "wallabyType",
+                   "type": "string",
+                   "label": "Type"
+               }
+           ],
+           "doubleClickTab": null,
+           "queryDocID": null,
+           "enableFeathers": [
+           ],
+           "keyCodePillows": [
+           ],
+           "hideIfDisabled": false,
+           "sortable": [
+           ],
+           "room": "__CONFIG__",
+           "triggers": [
+               "",
+               "clicked",
+               "double-clicked",
+               "key"
+           ],
+           "orderPath": null,
+           "viewArguments": {
+               "filter": [
+               ],
+               "path": "widgets"
+           },
+           "view": ""
        },
        "itest-payload-table": {
+           "pillow": null,
            "room": null,
-           "wallabyType": "PayloadLabel",
-           "pillow": null
+           "wallabyType": "PayloadLabel"
        },
        "inspector-autoresize": {
            "selectOnEdit": false,
@@ -1316,6 +1414,28 @@
            ],
            "enablePathValue": null,
            "includeSeconds": false
+       },
+       "inspector-cb-includeseconds": {
+           "selectOnEdit": false,
+           "enablePath": null,
+           "hideIfDisabled": false,
+           "room": "__CONFIG__",
+           "triggers": [
+               "",
+               "clicked",
+               "pressed",
+               "released",
+               "checked",
+               "unchecked"
+           ],
+           "triggeredPillows": {
+           },
+           "value": "true",
+           "wallabyType": "CheckBox",
+           "path": "widgets.*.includeSeconds",
+           "enableFeathers": [
+           ],
+           "enablePathValue": null
        },
        "itest-slider": {
            "enablePath": null,
@@ -1490,29 +1610,36 @@
            "identifier": null
        },
        "inspector-cb-pillow": {
-           "selectOnEdit": false,
-           "enablePath": null,
-           "hideIfDisabled": false,
-           "room": "__CONFIG__",
            "sourcePath": "all",
            "viewDisplayPath": null,
-           "dataView": false,
-           "throwWhileEditing": false,
-           "selectPillow": null,
+           "triggeredPillows": {
+           },
+           "wallabyType": "ComboBox",
+           "enablePath": null,
            "viewIdentifier": null,
            "source": "__SUGGEST__:__DOC__",
-           "isEditor": true,
-           "insertPillow": null,
            "viewPath": null,
-           "view": null,
+           "selectOnEdit": false,
+           "enablePathValue": null,
+           "selectPillow": null,
+           "dataView": false,
            "path": "widgets.*.triggeredPillows.*.pillow",
-           "isView": false,
            "enableFeathers": [
            ],
-           "enablePathValue": null,
+           "throwWhileEditing": false,
+           "hideIfDisabled": false,
+           "room": "__CONFIG__",
+           "triggers": [
+               "",
+               "enter",
+               "key"
+           ],
            "viewArguments": {
            },
-           "wallabyType": "ComboBox"
+           "isEditor": true,
+           "isView": false,
+           "insertPillow": null,
+           "view": null
        },
        "inspector-querydocid": {
            "selectOnEdit": false,
@@ -1977,6 +2104,7 @@
            "enterTab": null
        },
        "itest-label": {
+           "codeHighlight": false,
            "enablePath": null,
            "markdown": false,
            "room": null,
