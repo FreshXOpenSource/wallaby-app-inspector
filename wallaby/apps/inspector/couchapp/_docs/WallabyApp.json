@@ -71,10 +71,10 @@
                "pressed",
                "released"
            ],
-           "feathers": "widgets",
+           "defaultSheet": "",
            "triggeredPillows": {
            },
-           "defaultSheet": "",
+           "feathers": "widgets",
            "wallabyType": "ActionButton",
            "tab": null,
            "enableFeathers": [
@@ -85,7 +85,6 @@
            "pillow": "DocumentChanger.In.RemoveKey"
        },
        "inspector-identifier": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -97,7 +96,9 @@
                "finished",
                "key"
            ],
-           "throwWhileEditing": false,
+           "enablePathValue": null,
+           "enableFeathers": [
+           ],
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -105,9 +106,8 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.identifier",
-           "enableFeathers": [
-           ],
-           "enablePathValue": null,
+           "selectOnEdit": false,
+           "throwWhileEditing": false,
            "enterTab": null
        },
        "inspector-dbcolumns-remove": {
@@ -135,14 +135,14 @@
        "inspector-main-tabs": {
            "enablePath": null,
            "hideIfDisabled": false,
-           "defaultTab": null,
-           "enableFeathers": [
-           ],
+           "sheets": null,
+           "identifier": "main",
            "defaultSheet": null,
            "wallabyType": "Tabs",
-           "sheets": null,
+           "defaultTab": null,
            "path": null,
-           "identifier": "main",
+           "enableFeathers": [
+           ],
            "enablePathValue": null,
            "room": "__CONFIG__"
        },
@@ -235,21 +235,21 @@
            "pillow": "DocumentChanger.In.RemoveRow"
        },
        "inspector-min-height": {
-           "selectOnEdit": false,
            "enablePath": "widgets.*.autoResizeCells",
            "hideIfDisabled": false,
            "room": "__CONFIG__",
            "labelText": "",
-           "decimals": 0,
+           "enablePathValue": "True",
+           "enableFeathers": [
+           ],
            "maximum": "200.0",
            "singleStep": 1,
            "minimum": 0,
            "wallabyType": "NumericLineEdit",
            "hasSetButton": false,
            "path": "widgets.*.minRowHeight",
-           "enableFeathers": [
-           ],
-           "enablePathValue": "True",
+           "selectOnEdit": false,
+           "decimals": 0,
            "unit": "px"
        },
        "inspector-groupbox-view": {
@@ -263,7 +263,6 @@
            "enablePathValue": null
        },
        "inspector-room": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -275,7 +274,9 @@
                "finished",
                "key"
            ],
-           "throwWhileEditing": false,
+           "enablePathValue": null,
+           "enableFeathers": [
+           ],
            "triggeredPillows": [
                {
                    "trigger": "enter",
@@ -299,12 +300,12 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.room",
-           "enableFeathers": [
-           ],
-           "enablePathValue": null,
+           "selectOnEdit": false,
+           "throwWhileEditing": false,
            "enterTab": null
        },
        "itest-radio": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": null,
@@ -316,17 +317,17 @@
                "checked",
                "unchecked"
            ],
-           "enableFeathers": [
-           ],
            "triggeredPillows": {
            },
            "value": null,
            "wallabyType": "RadioButton",
            "path": null,
-           "selectOnEdit": false,
+           "enableFeathers": [
+           ],
            "enablePathValue": null
        },
        "inspector-source": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -338,9 +339,7 @@
                "finished",
                "key"
            ],
-           "enablePathValue": null,
-           "enableFeathers": [
-           ],
+           "throwWhileEditing": false,
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -348,8 +347,9 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.source",
-           "selectOnEdit": false,
-           "throwWhileEditing": false,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
            "enterTab": null
        },
        "inspector-groupbox-query": {
@@ -363,6 +363,7 @@
            "enablePathValue": null
        },
        "inspector-unit": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -374,9 +375,7 @@
                "finished",
                "key"
            ],
-           "enablePathValue": null,
-           "enableFeathers": [
-           ],
+           "throwWhileEditing": false,
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -384,8 +383,9 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.unit",
-           "selectOnEdit": false,
-           "throwWhileEditing": false,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
            "enterTab": null
        },
        "inspector-rooms": {
@@ -427,36 +427,26 @@
            ],
            "identifier": null
        },
-       "inspector-button-suggest": {
-           "enablePath": null,
-           "hideIfDisabled": false,
-           "room": "__CONFIG__",
-           "triggers": [
-               "",
-               "clicked",
-               "pressed",
-               "released"
-           ],
-           "triggeredPillows": {
-           },
-           "feathers": "",
-           "wallabyType": "ActionButton",
-           "tab": null,
-           "enableFeathers": [
-           ],
-           "enablePathValue": null,
-           "pillow": "Inspector.In.Suggest"
-       },
-       "itest-datedit": {
-           "defaultToNow": false,
+       "inspector-groupbox-triggeredpillows": {
            "enablePath": null,
            "hideIfDisabled": false,
            "room": null,
+           "wallabyType": "GroupBox",
+           "sheets": "gbTriggeredPillows",
            "enableFeathers": [
            ],
+           "enablePathValue": null
+       },
+       "itest-datedit": {
+           "defaultToNow": false,
+           "selectOnEdit": false,
+           "enablePath": null,
+           "hideIfDisabled": false,
+           "room": null,
            "wallabyType": "DateEdit",
            "path": null,
-           "selectOnEdit": false,
+           "enableFeathers": [
+           ],
            "enablePathValue": null
        },
        "inspector-container-sheets": {
@@ -472,8 +462,7 @@
        "inspector-filter-widgets": {
            "sourcePath": "filters",
            "viewDisplayPath": null,
-           "triggeredPillows": {
-           },
+           "dataView": false,
            "wallabyType": "ComboBox",
            "enablePath": null,
            "viewIdentifier": null,
@@ -482,7 +471,8 @@
            "selectOnEdit": false,
            "enablePathValue": null,
            "selectPillow": null,
-           "dataView": false,
+           "triggeredPillows": {
+           },
            "path": "args.filter",
            "enableFeathers": [
            ],
@@ -499,9 +489,11 @@
            "isEditor": false,
            "isView": false,
            "insertPillow": null,
+           "autoSelectFirst": true,
            "view": null
        },
        "inspector-cb-isjson": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -510,76 +502,75 @@
                "checked",
                "unchecked"
            ],
-           "enableFeathers": [
-           ],
            "triggeredPillows": {
            },
            "value": "True",
            "wallabyType": "CheckBox",
            "path": "widgets.*.triggeredPillows.*.isJson",
-           "selectOnEdit": false,
-           "enablePathValue": null
-       },
-       "inspector-sortable": {
-           "triggeredPillows": {
-           },
-           "doubleClickFeathers": null,
-           "wallabyType": "EmbeddedViewTable",
-           "path": "widgets.*.sortable",
-           "minColumnWidth": 0,
-           "enablePath": null,
-           "editOnInsert": false,
-           "minRowHeight": 0,
-           "doubleClickPillow": null,
-           "reverseOrder": false,
-           "selectOnEdit": false,
-           "enablePathValue": null,
-           "sizeHints": {
-           },
-           "autoResizeCells": false,
-           "wrapInList": false,
-           "dbColumns": [
-               {
-                   "path": "path",
-                   "type": "stringedit",
-                   "label": "The column's path"
-               },
-               {
-                   "path": "sortPath",
-                   "type": "stringedit",
-                   "label": "The path of the sort criteria"
-               }
-           ],
-           "doubleClickTab": null,
-           "isList": true,
-           "notSelectableIfDisabled": false,
            "enableFeathers": [
            ],
+           "enablePathValue": null
+       },
+       "inspector-sizehints-add": {
+           "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
            "triggers": [
                "",
                "clicked",
-               "double-clicked",
-               "key"
+               "pressed",
+               "released"
            ],
-           "identifier": null
+           "triggeredPillows": [
+               {
+                   "isJson": true,
+                   "trigger": "clicked",
+                   "feathers": "[\"widgets.*.sizeHints\", {}]",
+                   "pillow": "DocumentChanger.In.InsertKey"
+               }
+           ],
+           "feathers": null,
+           "wallabyType": "ActionButton",
+           "tab": null,
+           "enableFeathers": [
+               "Edit",
+               "Dirty"
+           ],
+           "enablePathValue": null,
+           "pillow": null
        },
-       "itest-togglebutton": {
+       "inspector-minimum": {
            "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
+           "room": "__CONFIG__",
+           "labelText": "Minimum",
+           "decimals": "0.0",
+           "maximum": 99999,
+           "singleStep": 0,
+           "minimum": "-99999",
+           "wallabyType": "NumericLineEdit",
+           "hasSetButton": false,
+           "path": "widgets.*.minimum",
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
+           "unit": ""
+       },
+       "itest-togglebutton": {
+           "enablePath": null,
+           "hideIfDisabled": false,
            "room": null,
+           "enableFeathers": [
+           ],
            "triggeredPillows": {
            },
            "wallabyType": "ToggleButton",
            "path": null,
-           "enableFeathers": [
-           ],
+           "selectOnEdit": false,
            "enablePathValue": null
        },
        "inspector-defaultsheet": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -591,7 +582,9 @@
                "finished",
                "key"
            ],
-           "throwWhileEditing": false,
+           "enablePathValue": null,
+           "enableFeathers": [
+           ],
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -599,9 +592,8 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.defaultSheet",
-           "enableFeathers": [
-           ],
-           "enablePathValue": null,
+           "selectOnEdit": false,
+           "throwWhileEditing": false,
            "enterTab": null
        },
        "inspector-groupbox-tablesettings": {
@@ -637,7 +629,6 @@
            "pillow": "DocumentChanger.In.InsertRow"
        },
        "inspector-enable-value": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -649,7 +640,9 @@
                "finished",
                "key"
            ],
-           "throwWhileEditing": false,
+           "enablePathValue": null,
+           "enableFeathers": [
+           ],
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -657,9 +650,8 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.enablePathValue",
-           "enableFeathers": [
-           ],
-           "enablePathValue": null,
+           "selectOnEdit": false,
+           "throwWhileEditing": false,
            "enterTab": null
        },
        "inspector-sortable-remove": {
@@ -683,12 +675,13 @@
            "wallabyType": "ActionButton",
            "tab": null,
            "enableFeathers": [
+               "Edit",
+               "Dirty"
            ],
            "enablePathValue": null,
            "pillow": ""
        },
        "inspector-orderpath": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -700,7 +693,9 @@
                "finished",
                "key"
            ],
-           "throwWhileEditing": false,
+           "enablePathValue": null,
+           "enableFeathers": [
+           ],
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -708,12 +703,12 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.orderPath",
-           "enableFeathers": [
-           ],
-           "enablePathValue": null,
+           "selectOnEdit": false,
+           "throwWhileEditing": false,
            "enterTab": null
        },
        "inspector-valuebutton-value": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": null,
@@ -725,9 +720,7 @@
                "finished",
                "key"
            ],
-           "enablePathValue": null,
-           "enableFeathers": [
-           ],
+           "throwWhileEditing": false,
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -735,8 +728,9 @@
            "contextMenuEntries": {
            },
            "path": null,
-           "selectOnEdit": false,
-           "throwWhileEditing": false,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
            "enterTab": null
        },
        "inspector-enable-feathers-remove": {
@@ -808,62 +802,55 @@
            "enablePathValue": null,
            "pillow": "DocumentChanger.In.RemoveKey"
        },
-       "inspector-sizehints-add": {
-           "enablePath": null,
-           "hideIfDisabled": false,
-           "room": "__CONFIG__",
-           "triggers": [
-               "",
-               "clicked",
-               "pressed",
-               "released"
-           ],
-           "triggeredPillows": [
-               {
-                   "isJson": true,
-                   "trigger": "clicked",
-                   "feathers": "[\"widgets.*.sizeHints\", {}]",
-                   "pillow": "DocumentChanger.In.InsertKey"
-               }
-           ],
-           "feathers": null,
-           "wallabyType": "ActionButton",
-           "tab": null,
-           "enableFeathers": [
-               "Edit",
-               "Dirty"
-           ],
-           "enablePathValue": null,
-           "pillow": null
-       },
-       "inspector-save": {
-           "enablePath": null,
-           "hideIfDisabled": false,
-           "room": "__CONFIG__",
-           "triggers": [
-               "",
-               "clicked",
-               "pressed",
-               "released"
-           ],
+       "inspector-sortable": {
            "triggeredPillows": {
            },
-           "feathers": null,
-           "__class__": null,
-           "wallabyType": "ActionButton",
-           "tab": null,
-           "enableFeathers": [
-               "Edit",
-               "New",
-               "Dirty"
-           ],
+           "doubleClickFeathers": null,
+           "wallabyType": "EmbeddedViewTable",
+           "path": "widgets.*.sortable",
+           "minColumnWidth": 0,
+           "enablePath": null,
+           "editOnInsert": false,
+           "minRowHeight": 0,
+           "doubleClickPillow": null,
+           "reverseOrder": false,
+           "selectOnEdit": false,
            "enablePathValue": null,
-           "pillow": "EditDocument.In.Save"
+           "sizeHints": {
+           },
+           "autoResizeCells": false,
+           "wrapInList": false,
+           "dbColumns": [
+               {
+                   "path": "path",
+                   "type": "stringedit",
+                   "label": "The column's path"
+               },
+               {
+                   "path": "sortPath",
+                   "type": "stringedit",
+                   "label": "The path of the sort criteria"
+               }
+           ],
+           "doubleClickTab": null,
+           "isList": true,
+           "notSelectableIfDisabled": false,
+           "enableFeathers": [
+           ],
+           "hideIfDisabled": false,
+           "room": "__CONFIG__",
+           "triggers": [
+               "",
+               "clicked",
+               "double-clicked",
+               "key"
+           ],
+           "identifier": null
        },
-       "inspector-popuptitle": {
+       "inspector-querydocid": {
            "enablePath": null,
            "hideIfDisabled": false,
-           "room": null,
+           "room": "__CONFIG__",
            "enterPillow": null,
            "triggers": [
                "",
@@ -881,9 +868,35 @@
            "wallabyType": "LineEdit",
            "contextMenuEntries": {
            },
-           "path": null,
+           "path": "widgets.*.queryDocID",
            "selectOnEdit": false,
            "throwWhileEditing": false,
+           "enterTab": null
+       },
+       "inspector-popuptitle": {
+           "selectOnEdit": false,
+           "enablePath": null,
+           "hideIfDisabled": false,
+           "room": null,
+           "enterPillow": null,
+           "triggers": [
+               "",
+               "changed",
+               "enter",
+               "finished",
+               "key"
+           ],
+           "throwWhileEditing": false,
+           "triggeredPillows": {
+           },
+           "enterFeathers": null,
+           "wallabyType": "LineEdit",
+           "contextMenuEntries": {
+           },
+           "path": null,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
            "enterTab": null
        },
        "inspector-peers": {
@@ -932,6 +945,7 @@
            "identifier": null
        },
        "inspector-pillow": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -943,9 +957,7 @@
                "finished",
                "key"
            ],
-           "enablePathValue": null,
-           "enableFeathers": [
-           ],
+           "throwWhileEditing": false,
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -953,8 +965,9 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.pillow",
-           "selectOnEdit": false,
-           "throwWhileEditing": false,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
            "enterTab": null
        },
        "inspector-table-config": {
@@ -1012,6 +1025,18 @@
            ],
            "identifier": null
        },
+       "itest-valuebutton": {
+           "selectOnEdit": false,
+           "enablePath": null,
+           "hideIfDisabled": false,
+           "room": null,
+           "value": 0,
+           "wallabyType": "ValueButton",
+           "path": null,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null
+       },
        "inspector-table-viewargs": {
            "triggeredPillows": {
            },
@@ -1059,6 +1084,7 @@
            "identifier": null
        },
        "inspector-feathers": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -1070,9 +1096,7 @@
                "finished",
                "key"
            ],
-           "enablePathValue": null,
-           "enableFeathers": [
-           ],
+           "throwWhileEditing": false,
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -1080,11 +1104,13 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.feathers",
-           "selectOnEdit": false,
-           "throwWhileEditing": false,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
            "enterTab": null
        },
        "inspector-dataview": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -1093,14 +1119,13 @@
                "checked",
                "unchecked"
            ],
-           "enableFeathers": [
-           ],
            "triggeredPillows": {
            },
            "value": "True",
            "wallabyType": "CheckBox",
            "path": "widgets.*.dataView",
-           "selectOnEdit": false,
+           "enableFeathers": [
+           ],
            "enablePathValue": null
        },
        "inspector-dbcolumns-add": {
@@ -1126,6 +1151,7 @@
            "pillow": "DocumentChanger.In.InsertRow"
        },
        "inspector-hideIfDisabled": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -1134,63 +1160,29 @@
                "checked",
                "unchecked"
            ],
-           "enableFeathers": [
-           ],
            "triggeredPillows": {
            },
            "value": "True",
            "wallabyType": "CheckBox",
            "path": "widgets.*.hideIfDisabled",
-           "selectOnEdit": false,
-           "enablePathValue": null
-       },
-       "inspector-peers-config": {
-           "triggeredPillows": {
-           },
-           "doubleClickFeathers": null,
-           "wallabyType": "EmbeddedViewTable",
-           "path": "rooms.*.Peers.*.config",
-           "minColumnWidth": 0,
-           "enablePath": null,
-           "editOnInsert": false,
-           "minRowHeight": 0,
-           "doubleClickPillow": null,
-           "reverseOrder": false,
-           "selectOnEdit": false,
-           "enablePathValue": null,
-           "sizeHints": {
-           },
-           "autoResizeCells": false,
-           "wrapInList": false,
-           "dbColumns": [
-               {
-                   "path": "__key__",
-                   "args": "",
-                   "type": "stringedit",
-                   "label": "Key"
-               },
-               {
-                   "path": "*",
-                   "type": "autoedit",
-                   "label": "Value"
-               }
-           ],
-           "doubleClickTab": null,
-           "isList": false,
-           "notSelectableIfDisabled": false,
            "enableFeathers": [
            ],
+           "enablePathValue": null
+       },
+       "inspector-widget-tabs": {
+           "enablePath": null,
            "hideIfDisabled": false,
-           "room": "__CONFIG__",
-           "triggers": [
-               "",
-               "clicked",
-               "double-clicked",
-               "key"
+           "room": null,
+           "enableFeathers": [
            ],
-           "identifier": null
+           "defaultSheet": null,
+           "wallabyType": "Tabs",
+           "sheets": null,
+           "identifier": null,
+           "enablePathValue": null
        },
        "inspector-path": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -1202,9 +1194,7 @@
                "finished",
                "key"
            ],
-           "enablePathValue": null,
-           "enableFeathers": [
-           ],
+           "throwWhileEditing": false,
            "triggeredPillows": {
            },
            "__class__": null,
@@ -1213,8 +1203,9 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.path",
-           "selectOnEdit": false,
-           "throwWhileEditing": false,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
            "enterTab": null
        },
        "inspector-groupbox-roomandpath": {
@@ -1255,8 +1246,7 @@
        "inspector-triggers": {
            "sourcePath": "widgets.*.triggers",
            "viewDisplayPath": null,
-           "triggeredPillows": {
-           },
+           "dataView": false,
            "wallabyType": "ComboBox",
            "enablePath": null,
            "viewIdentifier": null,
@@ -1265,7 +1255,8 @@
            "selectOnEdit": false,
            "enablePathValue": null,
            "selectPillow": null,
-           "dataView": false,
+           "triggeredPillows": {
+           },
            "path": "widgets.*.triggeredPillows.*.trigger",
            "enableFeathers": [
            ],
@@ -1282,13 +1273,15 @@
            "isEditor": false,
            "isView": false,
            "insertPillow": null,
+           "autoSelectFirst": false,
            "view": null
        },
        "inspector-query-widgets": {
            "contextMenuEntries": {
            },
            "idVisible": false,
-           "dataView": true,
+           "triggeredPillows": {
+           },
            "doubleClickFeathers": null,
            "multiSelect": false,
            "wallabyType": "MultiViewTable",
@@ -1302,8 +1295,7 @@
            "sizeHints": {
            },
            "autoResizeCells": false,
-           "triggeredPillows": {
-           },
+           "dataView": true,
            "dbColumns": [
                {
                    "path": "__key__",
@@ -1336,7 +1328,8 @@
            "viewArguments": {
                "filter": [
                ],
-               "path": "widgets"
+               "path": "widgets",
+               "hideEmpty": true
            },
            "view": ""
        },
@@ -1346,7 +1339,6 @@
            "wallabyType": "PayloadLabel"
        },
        "inspector-autoresize": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -1355,17 +1347,17 @@
                "checked",
                "unchecked"
            ],
+           "enableFeathers": [
+           ],
            "triggeredPillows": {
            },
            "value": "True",
            "wallabyType": "CheckBox",
            "path": "widgets.*.autoResizeCells",
-           "enableFeathers": [
-           ],
+           "selectOnEdit": false,
            "enablePathValue": null
        },
        "inspector-cbvalue": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -1377,7 +1369,9 @@
                "finished",
                "key"
            ],
-           "throwWhileEditing": false,
+           "enablePathValue": null,
+           "enableFeathers": [
+           ],
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -1385,38 +1379,36 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.value",
-           "enableFeathers": [
-           ],
-           "enablePathValue": null,
+           "selectOnEdit": false,
+           "throwWhileEditing": false,
            "enterTab": null
        },
        "itest-textpopup": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": null,
            "title": null,
-           "enableFeathers": [
-           ],
            "wallabyType": "TextPopupButton",
            "path": null,
-           "selectOnEdit": false,
+           "enableFeathers": [
+           ],
            "enablePathValue": null
        },
        "itest-datetimedit": {
            "defaultToNow": false,
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": null,
-           "wallabyType": "DateTimeEdit",
-           "path": null,
            "enableFeathers": [
            ],
+           "wallabyType": "DateTimeEdit",
+           "path": null,
+           "selectOnEdit": false,
            "enablePathValue": null,
            "includeSeconds": false
        },
        "inspector-cb-includeseconds": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -1428,56 +1420,74 @@
                "checked",
                "unchecked"
            ],
+           "enableFeathers": [
+           ],
            "triggeredPillows": {
            },
            "value": "true",
            "wallabyType": "CheckBox",
            "path": "widgets.*.includeSeconds",
-           "enableFeathers": [
-           ],
+           "selectOnEdit": false,
            "enablePathValue": null
        },
        "itest-slider": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": null,
            "min": 0,
            "max": 0,
-           "enableFeathers": [
-           ],
            "wallabyType": "Slider",
            "path": null,
-           "selectOnEdit": false,
-           "enablePathValue": null
-       },
-       "inspector-sourcepath": {
-           "enablePath": null,
-           "hideIfDisabled": false,
-           "room": "__CONFIG__",
-           "enterPillow": null,
-           "triggers": [
-               "",
-               "changed",
-               "enter",
-               "finished",
-               "key"
-           ],
-           "enablePathValue": null,
            "enableFeathers": [
            ],
+           "enablePathValue": null
+       },
+       "inspector-widgets": {
            "triggeredPillows": {
            },
-           "enterFeathers": null,
-           "wallabyType": "LineEdit",
-           "contextMenuEntries": {
-           },
-           "path": "widgets.*.sourcePath",
+           "doubleClickFeathers": null,
+           "minRowHeight": "50.0",
+           "wallabyType": "EmbeddedViewTable",
+           "path": "widgets",
+           "minColumnWidth": "100.0",
+           "enablePath": null,
+           "editOnInsert": false,
+           "__class__": null,
+           "doubleClickPillow": null,
+           "reverseOrder": false,
            "selectOnEdit": false,
-           "throwWhileEditing": false,
-           "enterTab": null
+           "enablePathValue": null,
+           "sizeHints": {
+           },
+           "autoResizeCells": false,
+           "wrapInList": false,
+           "dbColumns": [
+               {
+                   "path": "__key__",
+                   "label": "Name"
+               },
+               {
+                   "path": "wallabyType",
+                   "label": "Type"
+               }
+           ],
+           "doubleClickTab": null,
+           "isList": false,
+           "notSelectableIfDisabled": false,
+           "enableFeathers": [
+           ],
+           "hideIfDisabled": false,
+           "room": "__CONFIG__",
+           "triggers": [
+               "",
+               "clicked",
+               "double-clicked",
+               "key"
+           ],
+           "identifier": null
        },
        "inspector-multiselect": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -1486,13 +1496,14 @@
                "checked",
                "unchecked"
            ],
+           "enableFeathers": [
+           ],
            "triggeredPillows": {
            },
            "value": "True",
            "wallabyType": "CheckBox",
            "path": "multiSelect",
-           "enableFeathers": [
-           ],
+           "selectOnEdit": false,
            "enablePathValue": null
        },
        "inspector-sortable-add": {
@@ -1516,19 +1527,31 @@
            "wallabyType": "ActionButton",
            "tab": null,
            "enableFeathers": [
+               "Edit",
+               "Dirty"
            ],
            "enablePathValue": null,
            "pillow": ""
        },
-       "inspector-groupbox-triggeredpillows": {
+       "inspector-button-suggest": {
            "enablePath": null,
            "hideIfDisabled": false,
-           "room": null,
-           "wallabyType": "GroupBox",
-           "sheets": "gbTriggeredPillows",
+           "room": "__CONFIG__",
+           "triggers": [
+               "",
+               "clicked",
+               "pressed",
+               "released"
+           ],
+           "triggeredPillows": {
+           },
+           "feathers": "",
+           "wallabyType": "ActionButton",
+           "tab": null,
            "enableFeathers": [
            ],
-           "enablePathValue": null
+           "enablePathValue": null,
+           "pillow": "Inspector.In.Suggest"
        },
        "inspector-doc-rooms": {
            "triggeredPillows": {
@@ -1612,8 +1635,7 @@
        "inspector-cb-pillow": {
            "sourcePath": "all",
            "viewDisplayPath": null,
-           "triggeredPillows": {
-           },
+           "dataView": false,
            "wallabyType": "ComboBox",
            "enablePath": null,
            "viewIdentifier": null,
@@ -1622,7 +1644,8 @@
            "selectOnEdit": false,
            "enablePathValue": null,
            "selectPillow": null,
-           "dataView": false,
+           "triggeredPillows": {
+           },
            "path": "widgets.*.triggeredPillows.*.pillow",
            "enableFeathers": [
            ],
@@ -1639,33 +1662,32 @@
            "isEditor": true,
            "isView": false,
            "insertPillow": null,
+           "autoSelectFirst": false,
            "view": null
        },
-       "inspector-querydocid": {
-           "selectOnEdit": false,
+       "inspector-save": {
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
-           "enterPillow": null,
            "triggers": [
                "",
-               "changed",
-               "enter",
-               "finished",
-               "key"
+               "clicked",
+               "pressed",
+               "released"
            ],
-           "throwWhileEditing": false,
            "triggeredPillows": {
            },
-           "enterFeathers": null,
-           "wallabyType": "LineEdit",
-           "contextMenuEntries": {
-           },
-           "path": "widgets.*.queryDocID",
+           "feathers": null,
+           "__class__": null,
+           "wallabyType": "ActionButton",
+           "tab": null,
            "enableFeathers": [
+               "Edit",
+               "New",
+               "Dirty"
            ],
            "enablePathValue": null,
-           "enterTab": null
+           "pillow": "EditDocument.In.Save"
        },
        "inspector-table-sizehints": {
            "triggeredPillows": {
@@ -1688,9 +1710,9 @@
            "dbColumns": [
                {
                    "path": "__key__",
-                   "type-args": "",
+                   "label": "Column path",
                    "type": "stringedit",
-                   "label": "Column path"
+                   "type-args": ""
                },
                {
                    "path": "width",
@@ -1744,53 +1766,48 @@
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
-           "enableFeathers": [
-           ],
+           "identifier": "widgetConfigs",
            "defaultSheet": "iDefault",
            "wallabyType": "Stacked",
            "sheets": "^i.*",
            "path": "widgetConfigs",
-           "identifier": "widgetConfigs",
+           "enableFeathers": [
+           ],
            "enablePathValue": null
        },
        "itest-pushbutton": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": null,
-           "enableFeathers": [
-           ],
            "triggeredPillows": {
            },
            "wallabyType": "PushButton",
            "path": null,
-           "selectOnEdit": false,
+           "enableFeathers": [
+           ],
            "enablePathValue": null
        },
-       "inspector-rollback": {
+       "inspector-decimals": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
-           "triggers": [
-               "",
-               "clicked",
-               "pressed",
-               "released"
-           ],
-           "triggeredPillows": {
-           },
-           "feathers": null,
-           "__class__": null,
-           "wallabyType": "ActionButton",
-           "tab": null,
+           "labelText": "Decimals",
+           "decimals": 0,
+           "maximum": 10,
+           "singleStep": 0,
+           "minimum": 0,
+           "wallabyType": "NumericLineEdit",
+           "hasSetButton": false,
+           "path": "widgets.*.decimals",
            "enableFeathers": [
-               "Edit",
-               "New",
-               "Dirty"
            ],
            "enablePathValue": null,
-           "pillow": "EditDocument.In.Rollback"
+           "unit": ""
        },
        "inspector-view-identifier": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -1802,9 +1819,7 @@
                "finished",
                "key"
            ],
-           "enablePathValue": null,
-           "enableFeathers": [
-           ],
+           "throwWhileEditing": false,
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -1812,34 +1827,9 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.viewIdentifier",
-           "selectOnEdit": false,
-           "throwWhileEditing": false,
-           "enterTab": null
-       },
-       "inspector-view": {
-           "enablePath": null,
-           "hideIfDisabled": false,
-           "room": "__CONFIG__",
-           "enterPillow": null,
-           "triggers": [
-               "",
-               "changed",
-               "enter",
-               "finished",
-               "key"
-           ],
-           "enablePathValue": null,
            "enableFeathers": [
            ],
-           "triggeredPillows": {
-           },
-           "enterFeathers": null,
-           "wallabyType": "LineEdit",
-           "contextMenuEntries": {
-           },
-           "path": "widgets.*.view",
-           "selectOnEdit": false,
-           "throwWhileEditing": false,
+           "enablePathValue": null,
            "enterTab": null
        },
        "inspector-groupbox-room": {
@@ -1848,25 +1838,6 @@
            "room": null,
            "wallabyType": "GroupBox",
            "sheets": "gbRoom$",
-           "enableFeathers": [
-           ],
-           "enablePathValue": null
-       },
-       "inspector-aslist": {
-           "selectOnEdit": false,
-           "enablePath": null,
-           "hideIfDisabled": false,
-           "room": "__CONFIG__",
-           "triggers": [
-               "",
-               "checked",
-               "unchecked"
-           ],
-           "triggeredPillows": {
-           },
-           "value": "True",
-           "wallabyType": "CheckBox",
-           "path": "widgets.*.wrapInList",
            "enableFeathers": [
            ],
            "enablePathValue": null
@@ -1953,6 +1924,7 @@
            "pillow": ""
        },
        "inspector-label": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -1964,9 +1936,7 @@
                "finished",
                "key"
            ],
-           "enablePathValue": null,
-           "enableFeathers": [
-           ],
+           "throwWhileEditing": false,
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -1974,25 +1944,26 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.labelText",
-           "selectOnEdit": false,
-           "throwWhileEditing": false,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
            "enterTab": null
        },
        "inspector-widget-room": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": null,
            "enterPillow": null,
-           "enablePathValue": null,
-           "enableFeathers": [
-           ],
+           "throwWhileEditing": false,
            "enterFeathers": null,
            "wallabyType": "LineEdit",
            "contextMenuEntries": {
            },
            "path": null,
-           "selectOnEdit": false,
-           "throwWhileEditing": false,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
            "enterTab": null
        },
        "inspector-container-room": {
@@ -2034,6 +2005,7 @@
            "pillow": null
        },
        "inspector-viewpath": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -2045,9 +2017,7 @@
                "finished",
                "key"
            ],
-           "enablePathValue": null,
-           "enableFeathers": [
-           ],
+           "throwWhileEditing": false,
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -2055,29 +2025,31 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.viewPath",
-           "selectOnEdit": false,
-           "throwWhileEditing": false,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
            "enterTab": null
        },
        "inspector-maximum": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
            "labelText": "Maximum",
-           "enablePathValue": null,
-           "enableFeathers": [
-           ],
+           "decimals": "0.0",
            "maximum": 99999,
            "singleStep": 0,
            "minimum": "-99999",
            "wallabyType": "NumericLineEdit",
            "hasSetButton": false,
            "path": "widgets.*.maximum",
-           "selectOnEdit": false,
-           "decimals": "0.0",
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
            "unit": ""
        },
        "inspector-viewdisplaypath": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -2089,9 +2061,7 @@
                "finished",
                "key"
            ],
-           "enablePathValue": null,
-           "enableFeathers": [
-           ],
+           "throwWhileEditing": false,
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -2099,8 +2069,9 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.viewDisplayPath",
-           "selectOnEdit": false,
-           "throwWhileEditing": false,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
            "enterTab": null
        },
        "itest-label": {
@@ -2115,52 +2086,33 @@
            ],
            "enablePathValue": null
        },
-       "inspector-widgets": {
-           "triggeredPillows": {
-           },
-           "doubleClickFeathers": null,
-           "__class__": null,
-           "wallabyType": "EmbeddedViewTable",
-           "path": "widgets",
-           "minColumnWidth": "100.0",
-           "enablePath": null,
-           "editOnInsert": false,
-           "minRowHeight": "50.0",
-           "doubleClickPillow": null,
-           "reverseOrder": false,
+       "inspector-sourcepath": {
            "selectOnEdit": false,
-           "enablePathValue": null,
-           "sizeHints": {
-           },
-           "autoResizeCells": false,
-           "wrapInList": false,
-           "dbColumns": [
-               {
-                   "path": "__key__",
-                   "label": "Name"
-               },
-               {
-                   "path": "wallabyType",
-                   "label": "Type"
-               }
-           ],
-           "doubleClickTab": null,
-           "isList": false,
-           "notSelectableIfDisabled": false,
-           "enableFeathers": [
-           ],
+           "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
+           "enterPillow": null,
            "triggers": [
                "",
-               "clicked",
-               "double-clicked",
+               "changed",
+               "enter",
+               "finished",
                "key"
            ],
-           "identifier": null
+           "throwWhileEditing": false,
+           "triggeredPillows": {
+           },
+           "enterFeathers": null,
+           "wallabyType": "LineEdit",
+           "contextMenuEntries": {
+           },
+           "path": "widgets.*.sourcePath",
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
+           "enterTab": null
        },
        "inspector-setbutton": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -2168,18 +2120,18 @@
                "",
                "checked",
                "unchecked"
+           ],
+           "enableFeathers": [
            ],
            "triggeredPillows": {
            },
            "value": "True",
            "wallabyType": "CheckBox",
            "path": "widgets.*.hasSetButton",
-           "enableFeathers": [
-           ],
+           "selectOnEdit": false,
            "enablePathValue": null
        },
        "inspector-islist": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -2188,30 +2140,31 @@
                "checked",
                "unchecked"
            ],
+           "enableFeathers": [
+           ],
            "triggeredPillows": {
            },
            "value": "True",
            "wallabyType": "CheckBox",
            "path": "widgets.*.isList",
-           "enableFeathers": [
-           ],
+           "selectOnEdit": false,
            "enablePathValue": null
        },
        "inspector-enter-pillow": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
            "enterPillow": null,
-           "throwWhileEditing": false,
+           "enablePathValue": null,
+           "enableFeathers": [
+           ],
            "enterFeathers": null,
            "wallabyType": "LineEdit",
            "contextMenuEntries": {
            },
            "path": "",
-           "enableFeathers": [
-           ],
-           "enablePathValue": null,
+           "selectOnEdit": false,
+           "throwWhileEditing": false,
            "enterTab": null
        },
        "inspector-enable-feathers-add": {
@@ -2236,39 +2189,44 @@
            "enablePathValue": null,
            "pillow": "DocumentChanger.In.InsertRow"
        },
-       "inspector-decimals": {
+       "inspector-rollback": {
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
-           "labelText": "Decimals",
-           "enablePathValue": null,
-           "enableFeathers": [
+           "triggers": [
+               "",
+               "clicked",
+               "pressed",
+               "released"
            ],
-           "maximum": 10,
-           "singleStep": 0,
-           "minimum": 0,
-           "wallabyType": "NumericLineEdit",
-           "hasSetButton": false,
-           "path": "widgets.*.decimals",
-           "selectOnEdit": false,
-           "decimals": 0,
-           "unit": ""
+           "triggeredPillows": {
+           },
+           "feathers": null,
+           "__class__": null,
+           "wallabyType": "ActionButton",
+           "tab": null,
+           "enableFeathers": [
+               "Edit",
+               "New",
+               "Dirty"
+           ],
+           "enablePathValue": null,
+           "pillow": "EditDocument.In.Rollback"
        },
        "inspector-doc-json": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__DOC__",
            "isJson": true,
-           "throwWhileEditing": false,
-           "wallabyType": "PlainTextEdit",
-           "path": "__root__",
+           "enablePathValue": null,
            "enableFeathers": [
            ],
-           "enablePathValue": null
+           "wallabyType": "PlainTextEdit",
+           "path": "__root__",
+           "selectOnEdit": false,
+           "throwWhileEditing": false
        },
        "inspector-sheets": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -2280,7 +2238,9 @@
                "finished",
                "key"
            ],
-           "throwWhileEditing": false,
+           "enablePathValue": null,
+           "enableFeathers": [
+           ],
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -2288,12 +2248,12 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.sheets",
-           "enableFeathers": [
-           ],
-           "enablePathValue": null,
+           "selectOnEdit": false,
+           "throwWhileEditing": false,
            "enterTab": null
        },
        "inspector-isview": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -2302,17 +2262,17 @@
                "checked",
                "unchecked"
            ],
-           "enableFeathers": [
-           ],
            "triggeredPillows": {
            },
            "value": "True",
            "wallabyType": "CheckBox",
            "path": "widgets.*.isView",
-           "selectOnEdit": false,
+           "enableFeathers": [
+           ],
            "enablePathValue": null
        },
        "inspector-configdocid": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": null,
@@ -2324,9 +2284,7 @@
                "finished",
                "key"
            ],
-           "enablePathValue": null,
-           "enableFeathers": [
-           ],
+           "throwWhileEditing": false,
            "triggeredPillows": {
            },
            "enterFeathers": null,
@@ -2334,12 +2292,12 @@
            "contextMenuEntries": {
            },
            "path": null,
-           "selectOnEdit": false,
-           "throwWhileEditing": false,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
            "enterTab": null
        },
        "inspector-enable-path": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -2351,7 +2309,9 @@
                "finished",
                "key"
            ],
-           "throwWhileEditing": false,
+           "enablePathValue": null,
+           "enableFeathers": [
+           ],
            "triggeredPillows": [
                {
                    "trigger": "enter",
@@ -2364,16 +2324,16 @@
            "contextMenuEntries": {
            },
            "path": "widgets.*.enablePath",
-           "enableFeathers": [
-           ],
-           "enablePathValue": null,
+           "selectOnEdit": false,
+           "throwWhileEditing": false,
            "enterTab": null
        },
        "itest-multiview": {
            "contextMenuEntries": {
            },
            "idVisible": false,
-           "dataView": true,
+           "triggeredPillows": {
+           },
            "doubleClickFeathers": null,
            "multiSelect": false,
            "wallabyType": "MultiViewTable",
@@ -2387,8 +2347,7 @@
            "sizeHints": {
            },
            "autoResizeCells": false,
-           "triggeredPillows": {
-           },
+           "dataView": true,
            "dbColumns": [
            ],
            "doubleClickTab": null,
@@ -2442,7 +2401,6 @@
            "pillow": "DocumentChanger.In.RemoveRow"
        },
        "inspector-hasdata": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -2450,17 +2408,19 @@
                "",
                "checked",
                "unchecked"
+           ],
+           "enableFeathers": [
            ],
            "triggeredPillows": {
            },
            "value": "True",
            "wallabyType": "CheckBox",
            "path": "widgets.*.dataView",
-           "enableFeathers": [
-           ],
+           "selectOnEdit": false,
            "enablePathValue": null
        },
        "inspector-defaulttonow": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -2469,33 +2429,40 @@
                "checked",
                "unchecked"
            ],
-           "enableFeathers": [
-           ],
            "triggeredPillows": {
            },
            "value": "true",
            "wallabyType": "CheckBox",
            "path": "widgets.*.defaultToNow",
-           "selectOnEdit": false,
+           "enableFeathers": [
+           ],
            "enablePathValue": null
        },
-       "inspector-minimum": {
+       "inspector-view": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
-           "labelText": "Minimum",
-           "enablePathValue": null,
+           "enterPillow": null,
+           "triggers": [
+               "",
+               "changed",
+               "enter",
+               "finished",
+               "key"
+           ],
+           "throwWhileEditing": false,
+           "triggeredPillows": {
+           },
+           "enterFeathers": null,
+           "wallabyType": "LineEdit",
+           "contextMenuEntries": {
+           },
+           "path": "widgets.*.view",
            "enableFeathers": [
            ],
-           "maximum": 99999,
-           "singleStep": 0,
-           "minimum": "-99999",
-           "wallabyType": "NumericLineEdit",
-           "hasSetButton": false,
-           "path": "widgets.*.minimum",
-           "selectOnEdit": false,
-           "decimals": "0.0",
-           "unit": ""
+           "enablePathValue": null,
+           "enterTab": null
        },
        "inspector-dict": {
            "triggeredPillows": {
@@ -2541,15 +2508,22 @@
            ],
            "identifier": null
        },
-       "itest-valuebutton": {
+       "inspector-aslist": {
            "enablePath": null,
            "hideIfDisabled": false,
-           "room": null,
+           "room": "__CONFIG__",
+           "triggers": [
+               "",
+               "checked",
+               "unchecked"
+           ],
            "enableFeathers": [
            ],
-           "value": 0,
-           "wallabyType": "ValueButton",
-           "path": null,
+           "triggeredPillows": {
+           },
+           "value": "True",
+           "wallabyType": "CheckBox",
+           "path": "widgets.*.wrapInList",
            "selectOnEdit": false,
            "enablePathValue": null
        },
@@ -2594,21 +2568,21 @@
            "identifier": null
        },
        "inspector-min-width": {
-           "selectOnEdit": false,
            "enablePath": "widgets.*.autoResizeCells",
            "hideIfDisabled": false,
            "room": "__CONFIG__",
            "labelText": "",
-           "decimals": 0,
+           "enablePathValue": "True",
+           "enableFeathers": [
+           ],
            "maximum": 200,
            "singleStep": 1,
            "minimum": 0,
            "wallabyType": "NumericLineEdit",
            "hasSetButton": false,
            "path": "widgets.*.minColumnWidth",
-           "enableFeathers": [
-           ],
-           "enablePathValue": "True",
+           "selectOnEdit": false,
+           "decimals": 0,
            "unit": "px"
        },
        "inspector-rooms-remove": {
@@ -2634,7 +2608,6 @@
            "pillow": "DocumentChanger.In.RemoveKey"
        },
        "inspector-showid": {
-           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
@@ -2643,26 +2616,61 @@
                "checked",
                "unchecked"
            ],
+           "enableFeathers": [
+           ],
            "triggeredPillows": {
            },
            "value": "True",
            "wallabyType": "CheckBox",
            "path": "widgets.*.idVisible",
-           "enableFeathers": [
-           ],
+           "selectOnEdit": false,
            "enablePathValue": null
        },
-       "inspector-widget-tabs": {
+       "inspector-peers-config": {
+           "triggeredPillows": {
+           },
+           "doubleClickFeathers": null,
+           "wallabyType": "EmbeddedViewTable",
+           "path": "rooms.*.Peers.*.config",
+           "minColumnWidth": 0,
            "enablePath": null,
-           "hideIfDisabled": false,
-           "room": null,
-           "identifier": null,
-           "defaultSheet": null,
-           "wallabyType": "Tabs",
-           "sheets": null,
+           "editOnInsert": false,
+           "minRowHeight": 0,
+           "doubleClickPillow": null,
+           "reverseOrder": false,
+           "selectOnEdit": false,
+           "enablePathValue": null,
+           "sizeHints": {
+           },
+           "autoResizeCells": false,
+           "wrapInList": false,
+           "dbColumns": [
+               {
+                   "path": "__key__",
+                   "args": "",
+                   "type": "stringedit",
+                   "label": "Key"
+               },
+               {
+                   "path": "*",
+                   "type": "autoedit",
+                   "label": "Value"
+               }
+           ],
+           "doubleClickTab": null,
+           "isList": false,
+           "notSelectableIfDisabled": false,
            "enableFeathers": [
            ],
-           "enablePathValue": null
+           "hideIfDisabled": false,
+           "room": "__CONFIG__",
+           "triggers": [
+               "",
+               "clicked",
+               "double-clicked",
+               "key"
+           ],
+           "identifier": null
        },
        "inspector-groupbox-pillowAndFeathers": {
            "enablePath": null,
@@ -2675,45 +2683,45 @@
            "enablePathValue": null
        },
        "inspector-singlestep": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
            "labelText": "Single-Step",
-           "enablePathValue": null,
-           "enableFeathers": [
-           ],
+           "decimals": 0,
            "maximum": 99999,
            "singleStep": "1.0",
            "minimum": -99999,
            "wallabyType": "NumericLineEdit",
            "hasSetButton": false,
            "path": "widgets.*.singleStep",
-           "selectOnEdit": false,
-           "decimals": 0,
+           "enableFeathers": [
+           ],
+           "enablePathValue": null,
            "unit": null
        },
        "inspector-pe-feathers": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": "__CONFIG__",
            "isJson": false,
-           "throwWhileEditing": false,
-           "enableFeathers": [
-           ],
+           "enablePathValue": null,
            "wallabyType": "PlainTextEdit",
            "path": "widgets.*.triggeredPillows.*.feathers",
-           "selectOnEdit": false,
-           "enablePathValue": null
+           "enableFeathers": [
+           ],
+           "throwWhileEditing": false
        },
        "itest-image": {
+           "selectOnEdit": false,
            "enablePath": null,
            "hideIfDisabled": false,
            "room": null,
-           "enableFeathers": [
-           ],
            "wallabyType": "ImageLabel",
            "path": null,
-           "selectOnEdit": false,
+           "enableFeathers": [
+           ],
            "enablePathValue": null
        },
        "inspector-viewargs-add": {
