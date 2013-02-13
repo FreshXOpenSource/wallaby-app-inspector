@@ -76,7 +76,8 @@ class __config__(Room):
                 ]
             }
             for room in sorted(rooms.keys()):
-                filters["filters"].append([room, [{"room": "^" + room}]])
+                if not room.startswith('__'):
+                    filters["filters"].append([room, [{"room": "^" + room}]])
         else:
             filters = {
                 "filters": [
